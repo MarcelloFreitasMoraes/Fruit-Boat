@@ -67,7 +67,7 @@ export default function Modal({ showModal, setShowModal, isLogged }) {
 
                   <div>
                     <label htmlFor="Email">Senha</label>
-                    <input type="email" placeholder="Digite sua senha" onKeyUp={(e) => setPassword(e.target.value)} />
+                    <input type="password" placeholder="Digite sua senha" onKeyUp={(e) => setPassword(e.target.value)} />
                   </div>
 
 
