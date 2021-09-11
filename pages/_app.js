@@ -10,8 +10,6 @@ import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   const [isLogged, setIsLogged] = useState()
   const [data,setData]=useState()
-  console.log(data,"santossss");
-  console.log(pageProps,"pedra");
   const tema = Theme
 
   useEffect(() => {

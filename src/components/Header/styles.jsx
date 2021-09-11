@@ -25,7 +25,7 @@ export const TxtLogo = styled.p`
     font-size:24px;
     font-family: cursive;
     
-    span:{
+    span: {
         font-size:20px;
     }
 `

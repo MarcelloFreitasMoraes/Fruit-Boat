@@ -9,18 +9,14 @@ import axios from "axios";
 export default function Header({isLogged, setData }) {
   const [showModal, setShowModal] = useState(false);
   const [busca, setBusca] = useState();
-  // const [data, setData] = useState()
   const [reference, setReference] = useState()
 
 
-  // console.log(data,"tigre");
-  // console.log(busca,"leao");
 
   const url = "https://barraca-de-frutas-default-rtdb.firebaseio.com/Frutas/list.json"
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      console.log(res.data, 'data')
 
       const filterProducts = res.data.filter(item =>{
         return item !== null 

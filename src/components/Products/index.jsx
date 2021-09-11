@@ -6,15 +6,12 @@ import axios from 'axios'
 import Button from '../Button'
 
 export default function Products({ result, isLogged, data }) {
-    console.log(result,"copa");
-    console.log(data,"dragao");
     const [check, setCheck] = useState(false)
 
     const openChecked = () => {
         setCheck(prev => !prev)
     }
 
-    console.log(isLogged, 'isLogged')
 
     const url = "https://barraca-de-frutas-default-rtdb.firebaseio.com/Frutas/checkout.json"
 
@@ -35,7 +32,6 @@ export default function Products({ result, isLogged, data }) {
             <Container>
                 <S.Grid>
                     {data?.map((item,index) => {
-                        console.log(item,"item");
                         return (
                             <S.Box key={item.name}>   
                                 <S.BoxConteudo>                             

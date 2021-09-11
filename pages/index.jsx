@@ -4,14 +4,12 @@ import axios from "axios";
 import { useState,useEffect } from 'react'
 
 export default function Home({isLogged,data}) {
-  console.log(data,"brasil");
   const [result, setResult] = useState()
 
   const url = "https://barraca-de-frutas-default-rtdb.firebaseio.com/Frutas/list.json"
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      console.log(res.data, 'data')
 
       const filterProducts = res.data.filter(item =>{
         return item !== null 

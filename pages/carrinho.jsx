@@ -5,13 +5,11 @@ import * as S from '../src/styles/carrinhoStyle'
 
 export default function listProducts() {
   const [data, setData] = useState()
-  console.log(data, "datassssss");
 
   const url = "https://barraca-de-frutas-default-rtdb.firebaseio.com/Frutas/checkout.json"
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      console.log(res, "resposta");
       if (res.data) {
         setData(Object.entries(res.data));
       }
@@ -25,7 +23,7 @@ export default function listProducts() {
       ) : (
         <S.CarEmpty>
           <p>Carrinho Vazio</p>
-          <img src="../carrinho-vazio.svg" alt="" />
+          <img src="../carrinho-vazio.svg" alt="carrinho-vazio" />
         </S.CarEmpty>
       )}
     </>

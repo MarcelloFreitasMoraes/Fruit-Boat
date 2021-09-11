@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container } from "../../styles/Global";
 import * as S from "./styles";
-import { PDFDownloadLink, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer/lib/react-pdf.browser.cjs.js';
+import { PDFDownloadLink } from '@react-pdf/renderer/lib/react-pdf.browser.cjs.js';
 import PdfDocument from '../ReportPdf';
 import axios from 'axios'
 
 export default function Car({ data }) {
-  console.log(data, "dataljkbsdgsd");
   const [fruitsSelected, setFruitsSelected] = useState();
 
   useEffect(() => {
@@ -77,7 +76,7 @@ export default function Car({ data }) {
                 <p>R$ {total}</p>
               </S.Total>
 
-              <div>
+              <div onClick={()=>deleteCheckout(fruitsSelected)}>
                 <PDFDownloadLink
                   document={<PdfDocument data={fruitsSelected} total={total} />}
                   fileName="boleto.pdf">

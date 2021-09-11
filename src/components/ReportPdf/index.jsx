@@ -12,35 +12,46 @@ const style = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ffffe0'
   },
-  box: { margin: 30 },
+  box: { margin: 10,fontSize:'10px' },
   flex: {
-    width: 500,
-    margin: 30,
+    width: 200,
+    margin: 5,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    fontSize:"10px"
   },
   title: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize:"15px"
+  },
+  total:{
+    fontSize:"20px",
+    marginTop:"8px",
+    alignSelf:"flex-end"
+  },
+  margin:{
+    marginTop:"20px"
   }
 });
 
 const MyPdf = ({ data, total }) => (
 
   <Document>
-    <Page size="A4" style={style.page}>
-      <View></View>
-      <View style={style.box}>
-        <Text style={style.text}>Relatório Confidencial</Text>
-        <Text style={style.text}>Config. de Conta</Text>
-      </View>
+    <Page size="A6" style={style.page}>
+      <View style={style.margin}></View>
 
       <View style={style.box}>
         <Text>BARRACA DE FRUTAS</Text>
       </View>
 
       <View style={style.box}>
-        <Text>** Não é Documento Fiscal **</Text>
+        <Text>RUA: CRISTOVAO COLOMBO, 99 - Ribeirão Pires</Text>
+        <Text>CEP: 99999-999- SÃO PAULO- SP</Text>
+      </View>
+
+      <View style={style.box}>
+        <Text>CUPOM FISCAL</Text>
       </View>
 
       <View>
@@ -55,8 +66,9 @@ const MyPdf = ({ data, total }) => (
             </>
           )
         })}
+        
 
-        <View style={style.box}>
+        <View style={style.total}>
           <Text>Total: <sup>R$</sup>{total}</Text>
         </View>
 

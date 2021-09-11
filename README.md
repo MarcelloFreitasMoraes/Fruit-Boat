@@ -15,5 +15,5 @@ npm run dev
 
  ## Login
  To login use:
-email: fulano@frutas.com.br
+email: fulano@teste.com.br
 password: 654321

@@ -17,7 +17,7 @@ export default function Modal({ showModal, setShowModal, isLogged }) {
     transform: showModal ? `translateY(0%)` : `translateY(-100%)`,
   });
 
-  const loggedUser = "fulano@frutas.com.br"
+  const loggedUser = "fulano@teste.com.br"
   const nameUser = "Fulano"
   const loggedPassword = "654321"
 
