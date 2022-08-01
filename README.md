@@ -1,19 +1,16 @@
-# Barraca de Frutas
+Mercado-Fruta
+##Introdução O projeto é executado em Node, React (com Next.js) e Styled Components.
 
-## Getting Started
-The project runs on Node, React (with Next.js) and Styled Components.
+##Instalando Clone o repositório: git clone https://github.com/MarcelloFreitasMoraes/Fruit-Boat.git
 
-## Installing
-Clone the repository:
-git clone https://github.com/caioSilva-hub/barraca-de-frutas.git
+##Execute yarn install para instalar dependências de nós: yarn
 
-## Run npm install to install node dependencies:
-npm i
+Inicie o projeto:
+desenvolvedor de fios
 
-## Start the project:
-npm run dev
-
- ## Login
- To login use:
-email: fulano@teste.com.br
-password: 654321
+Construído com
+Next.js - renderização do lado do servidor Reagir com nó
+React - Biblioteca para construção de interfaces
+Styled-Components - styled-components é o resultado de imaginar como poderíamos aprimorar o CSS para estilizar sistemas de componentes React.
+Entrar
+Para fazer login use o e-mail: teste@teste.com.br e senha: 123456
